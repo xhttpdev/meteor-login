@@ -1,0 +1,15 @@
+<template name="invictus_login_layout">
+    <div class="page-header">
+        <h1>{{ getTitle }}</h1>
+    </div>
+    <div class="container">
+        {{> yield}}
+    </div>
+</template>
+
+<template name="logout_button_navbar">
+    <a href="/logout" role="button">
+        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+        {{ getText 'logoutText'}}
+    </a>
+</template>

@@ -1,0 +1,32 @@
+<template name="invictus_login">
+    <form id="form-login" class="form-horizontal">
+        <h2 class="form-signin-heading">{{ getText 'loginText' }}</h2>
+
+        {{#if isError}}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{ getErrorMessage }}
+        </div>
+        {{/if}}
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputUsername" placeholder="{{ getText 'userName' }}">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="inputPassword" placeholder="{{ getText 'password' }}">
+        </div>
+
+        {{#if isRegistrationAllowed}}
+        <div class="form-group">
+            <a href="/register" role="button">{{ getText 'registerLink' }}</a>
+        </div>
+        {{/if}}
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-primary btn-block">{{ getText 'loginButton' }}</button>
+        </div>
+
+    </form>
+</template>
