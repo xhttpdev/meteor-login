@@ -17,7 +17,9 @@ Login = {
             registerText: 'Registrieren',
             registerButton: 'Registrieren',
             registerLink: 'Noch keinen Account? Jetzt registrieren.',
-            logoutText: 'Abmelden'
+            logoutText: 'Abmelden',
+            logoutProgressText: 'Abmelden ...'
+
         },
         en: {
             userName: 'Username',
@@ -30,7 +32,8 @@ Login = {
             registerText: 'Join',
             registerButton: 'Join Now',
             registerLink: 'Need an account? Join Now.',
-            logoutText: 'Logout'
+            logoutText: 'Logout',
+            logoutProgressText: 'Logout ...'
         }
     },
 

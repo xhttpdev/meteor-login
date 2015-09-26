@@ -1,5 +1,4 @@
 Router.configure({
-    // the default layout
     layoutTemplate: 'invictus_login_layout'
 });
 
@@ -17,8 +16,10 @@ Router.route('/login', function () {
         this.redirect('/');
     } else {
         this.layout('invictus_login_layout');
-        this.render('invictus_login')
+        this.render('invictus_login');
     }
+}, {
+    name: 'login'
 });
 
 Router.route('/register', function () {
@@ -29,11 +30,19 @@ Router.route('/register', function () {
     } else {
         this.redirect('/login');
     }
+}, {
+    name: 'register'
 });
 
 Router.route('/logout', function () {
-    Meteor.logout();
+    var me = this;
+    Meteor.logout(function () {
+        me.redirect('/login');
+    });
     Session.keys = {};
-    this.redirect('/login');
+    this.layout('invictus_login_layout');
+    this.render('invictus_logout');
+}, {
+    name: 'logout'
 });
 

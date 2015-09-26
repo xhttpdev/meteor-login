@@ -1,5 +1,5 @@
 <template name="invictus_login_layout">
-    <div class="page-header">
+    <div class="page-header text-center">
         <h1>{{ getTitle }}</h1>
     </div>
     <div class="container">
@@ -7,9 +7,21 @@
     </div>
 </template>
 
-<template name="logout_button_navbar">
+<template name="invictus_logout">
+    <h2 class="text-center">
+        {{ getText 'logoutProgressText' }}
+    </h2>
+</template>
+
+<template name="logout_link">
     <a href="/logout" role="button">
         <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
         {{ getText 'logoutText'}}
     </a>
+</template>
+
+<template name="logout_button_navbar">
+    <button type="button" class="btn btn-danger navbar-btn logout">
+        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Logout
+    </button>
 </template>
