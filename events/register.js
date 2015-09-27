@@ -14,6 +14,9 @@ Template.invictus_register.events({
             }, function (err) {
                 if (err) {
                     Session.set('registerError', String(err));
+                } else {
+                    Meteor.loginWithPassword(user, password);
+                    Router.go('/');
                 }
             });
         }

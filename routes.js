@@ -1,5 +1,5 @@
 Router.configure({
-    layoutTemplate: 'invictus_login_layout'
+    layoutTemplate: 'xhttp_layout'
 });
 
 Router.onBeforeAction(function () {
@@ -15,7 +15,7 @@ Router.route('/login', function () {
     if (Meteor.userId()) {
         this.redirect('/');
     } else {
-        this.layout('invictus_login_layout');
+        this.layout('xhttp_layout');
         this.render('invictus_login');
     }
 }, {
@@ -25,7 +25,7 @@ Router.route('/login', function () {
 Router.route('/register', function () {
 
     if(Login.settings.allowRegister) {
-        this.layout('invictus_login_layout');
+        this.layout('xhttp_layout');
         this.render('invictus_register');
     } else {
         this.redirect('/login');
@@ -40,7 +40,7 @@ Router.route('/logout', function () {
         me.redirect('/login');
     });
     Session.keys = {};
-    this.layout('invictus_login_layout');
+    this.layout('xhttp_layout');
     this.render('invictus_logout');
 }, {
     name: 'logout'

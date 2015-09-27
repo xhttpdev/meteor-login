@@ -33,8 +33,16 @@ Package.onUse(function (api) {
         'events/login.js',
         'events/logout.js',
         'routes.js',
-        'styles.sass'
+        'styles.sass',
+        'lib/loadingMask/_loadingMask.sass',
+        'lib/loadingMask/loadingMask.js',
+        'lib/loadingMask/loadingMask.html',
+        'lib/alert/_alert.sass',
+        'lib/alert/alert.html',
+        'lib/alert/alert.js'
     ], 'client');
 
     api.export('Login');
+    api.export('Mask');
+    api.export('Alert');
 });
