@@ -1,6 +1,6 @@
 Package.describe({
     name: 'invictus:login',
-    version: '0.0.2',
+    version: '0.0.3',
     // Brief, one-line summary of the package.
     summary: 'Login / Register Form',
     // URL to the Git repository containing the source code for this package.
@@ -22,16 +22,23 @@ Package.onUse(function (api) {
     ]);
 
     api.addFiles([
+        'server/account.js'
+    ], 'server');
+
+    api.addFiles([
         'login.js',
         'layout.html',
         'login.html',
         'register.html',
+        'account.html',
         'helpers/layout.js',
         'helpers/register.js',
         'helpers/login.js',
+        'helpers/account.js',
         'events/register.js',
         'events/login.js',
         'events/logout.js',
+        'events/account.js',
         'routes.js',
         'styles.sass',
         'lib/loadingMask/_loadingMask.sass',

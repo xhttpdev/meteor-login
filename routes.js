@@ -46,3 +46,9 @@ Router.route('/logout', function () {
     name: 'logout'
 });
 
+Router.route('/account_settings', function () {
+    this.render('invictus_account_settings');
+}, {
+    name: 'account'
+});
+

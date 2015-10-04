@@ -1,6 +1,6 @@
 Template.invictus_login.helpers({
     isError: function () {
-        return (Session.get('loginError') !== undefined)
+        return (Session.get('loginError') !== undefined && Session.get('loginError') !== null)
     },
     getErrorMessage: function () {
         return Session.get('loginError');

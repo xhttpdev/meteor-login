@@ -5,6 +5,8 @@ Template.invictus_register.events({
         var password = event.target.inputPassword.value;
         var passwordConfirm = event.target.inputPasswordConfirm.value;
 
+        Session.set('registerError', null);
+
         if (password !== passwordConfirm) {
             Session.set('registerError', Login.getText('passwordConfirmError'));
         } else {

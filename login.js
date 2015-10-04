@@ -9,6 +9,9 @@ Login = {
         de: {
             userName: 'Benutzername',
             password: 'Passwort',
+            changePasswordText: 'Passwort ändern',
+            oldPassword: 'Aktuelles Passwort',
+            newPassword: 'Neues Passwort',
             passwordConfirm: 'Passwort bestätigen',
             passwordConfirmError: 'Passwörter stimmen nicht überein',
             loginText: 'Anmelden',
@@ -18,12 +21,18 @@ Login = {
             registerButton: 'Registrieren',
             registerLink: 'Noch keinen Account? Jetzt registrieren.',
             logoutText: 'Abmelden',
-            logoutProgressText: 'Abmelden ...'
+            logoutProgressText: 'Abmelden ...',
+            accountText: 'Konto',
+            accountSettingsText: 'Konto Einstellungen',
+            saveText: 'Speichern'
 
         },
         en: {
             userName: 'Username',
             password: 'Password',
+            changePasswordText: 'Change Password',
+            oldPassword: 'Current Password',
+            newPassword: 'New Password',
             passwordConfirm: 'Confirm Password',
             passwordConfirmError: 'Please confirm your password',
             loginText: 'Sign In',
@@ -33,7 +42,10 @@ Login = {
             registerButton: 'Join Now',
             registerLink: 'Need an account? Join Now.',
             logoutText: 'Logout',
-            logoutProgressText: 'Logout ...'
+            logoutProgressText: 'Logout ...',
+            accountText: 'Account',
+            accountSettingsText: 'Account Settings',
+            saveText: 'Save'
         }
     },
 

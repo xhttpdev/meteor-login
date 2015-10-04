@@ -20,8 +20,21 @@
     </a>
 </template>
 
+<template name="account_link">
+    <a href="/account_settings" role="button">
+        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        {{ getText 'accountText'}}
+    </a>
+</template>
+
 <template name="logout_button_navbar">
     <button type="button" class="btn btn-danger navbar-btn logout">
-        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Logout
+        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> {{getText 'logoutText'}}
+    </button>
+</template>
+
+<template name="account_button_navbar">
+    <button type="button" class="btn btn-success navbar-btn account">
+        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> {{getText 'accountText'}}
     </button>
 </template>

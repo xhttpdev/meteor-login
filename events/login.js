@@ -4,11 +4,11 @@ Template.invictus_login.events({
         var user = event.target.inputUsername.value;
         var password = event.target.inputPassword.value;
 
+        Session.set('loginError', null);
+
         Meteor.loginWithPassword(user, password, function (err) {
             if (err) {
                 Session.set('loginError', String(err));
-            } else {
-                Session.set('loginError', null);
             }
         });
     }
