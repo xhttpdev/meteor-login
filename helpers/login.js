@@ -6,6 +6,6 @@ Template.invictus_login.helpers({
         return Session.get('loginError');
     },
     isRegistrationAllowed: function () {
-        return Login.settings.allowRegister;
+        return Login.settings.allowJoin;
     }
 });

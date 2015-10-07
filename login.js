@@ -1,12 +1,12 @@
 Login = {
     settings: {
-        allowRegister: true,
+        allowJoin: true,
         title: null,
         language: 'en'
     },
 
     language: {
-        de: {
+        'de': {
             userName: 'Benutzername',
             password: 'Passwort',
             changePasswordText: 'Passwort ändern',
@@ -27,7 +27,7 @@ Login = {
             saveText: 'Speichern'
 
         },
-        en: {
+        'en-GB': {
             userName: 'Username',
             password: 'Password',
             changePasswordText: 'Change Password',
@@ -49,10 +49,25 @@ Login = {
         }
     },
 
+    /**
+     * @param {String} language
+     * @param {Object} config
+     */
+    addTranslations: function (language, config) {
+        this.language[language] = config;
+    },
+
+    /**
+     * @param {Object} config
+     */
     config: function (config) {
         this.settings = _.extend(this.settings, config);
     },
 
+    /**
+     * @param {String} key
+     * @returns {String}
+     */
     getText: function (key) {
         return this.language[this.settings.language][key];
     }

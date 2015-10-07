@@ -22,9 +22,9 @@ Router.route('/login', function () {
     name: 'login'
 });
 
-Router.route('/register', function () {
+Router.route('/join', function () {
 
-    if(Login.settings.allowRegister) {
+    if(Login.settings.allowJoin) {
         this.layout('xhttp_layout');
         this.render('invictus_register');
     } else {
