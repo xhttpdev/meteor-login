@@ -119,3 +119,7 @@ You can simple integrate a full functional account settings button or link in yo
     </div>
 
 Click the button to open a form in your `iron:router` layout.
+
+## TODOs ##
+
+- enable/disable Join-Form in Account Settings

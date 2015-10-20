@@ -2,7 +2,7 @@ Login = {
     settings: {
         allowJoin: true,
         title: null,
-        language: 'en'
+        language: 'en-GB'
     },
 
     language: {
