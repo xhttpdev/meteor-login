@@ -4,6 +4,8 @@ Router.configure({
 
 Router.onBeforeAction(function () {
 
+    $('body').removeClass('xhttp-login');
+
     if (!Meteor.userId()) {
         this.redirect('/login');
     }
@@ -15,6 +17,7 @@ Router.route('/login', function () {
     if (Meteor.userId()) {
         this.redirect('/');
     } else {
+        $('body').addClass('xhttp-login');
         this.layout('xhttp_layout');
         this.render('invictus_login');
     }
@@ -25,6 +28,7 @@ Router.route('/login', function () {
 Router.route('/join', function () {
 
     if(Login.settings.allowJoin) {
+        $('body').addClass('xhttp-login');
         this.layout('xhttp_layout');
         this.render('invictus_register');
     } else {
@@ -40,6 +44,7 @@ Router.route('/logout', function () {
         me.redirect('/login');
     });
     Session.keys = {};
+    $('body').addClass('xhttp-login');
     this.layout('xhttp_layout');
     this.render('invictus_logout');
 }, {

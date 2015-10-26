@@ -14,7 +14,7 @@ Template.invictus_account_settings.events({
 
         if (newPassword !== newPasswordConfirm) {
             Session.set('accountError', Login.getText('passwordConfirmError'));
-        } else {
+        } else if (oldPassword !== '' && newPassword !== '') {
             Accounts.changePassword(oldPassword, newPassword, function (err) {
                 if (err) {
                     Session.set('accountError', String(err));
