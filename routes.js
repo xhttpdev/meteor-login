@@ -7,6 +7,7 @@ Router.onBeforeAction(function () {
     $('body').removeClass('xhttp-login');
 
     if (!Meteor.userId()) {
+        Session.set('lastUrl', this.url);
         this.redirect('/login');
     }
 
@@ -15,7 +16,13 @@ Router.onBeforeAction(function () {
 
 Router.route('/login', function () {
     if (Meteor.userId()) {
-        this.redirect('/');
+        var lastUrl = Session.get('lastUrl');
+
+        if (lastUrl) {
+            this.redirect(lastUrl);
+        } else {
+            this.redirect('/');
+        }
     } else {
         $('body').addClass('xhttp-login');
         this.layout('xhttp_layout');
