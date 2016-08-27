@@ -1,6 +1,6 @@
 Package.describe({
     name: 'invictus:login',
-    version: '1.0.3',
+    version: '1.1.0',
     // Brief, one-line summary of the package.
     summary: 'Login / Register Form',
     // URL to the Git repository containing the source code for this package.
@@ -11,13 +11,14 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-    api.versionsFrom('1.2.0.2');
+    api.versionsFrom('1.4.1');
 
     api.use([
         'session',
         'templating',
         'iron:router@1.0.12',
-        'fourseven:scss@3.2.0',
+        'fourseven:scss@3.8.0_1',
+        'npm-bcrypt',
         'accounts-password@1.1.3'
     ]);
 
